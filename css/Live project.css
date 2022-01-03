@@ -1,0 +1,562 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+body{
+    background-image: linear-gradient(260deg,rgb(34, 180, 190),lightgray,tan);
+}
+.clear{
+    clear: both;
+}
+/*Navigation part css start*/
+nav{
+    background-color: pink;
+    padding: 2px 3px;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.logo{
+    width: 30%;
+    float: left;
+}
+.logo img{
+    height: 50px;
+}
+#name{
+    color: indigo;
+    float: right;
+    margin-right: 110px;
+    margin-top: 5px;
+}
+.menu{
+    width: 70%;
+    float: left;
+}
+.menu ul{
+     float: right;
+}
+.menu ul li{
+    float: left;
+    padding: 16px 20px;
+    position: relative;
+}
+.menu ul li a{
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.menu ul li a:hover{
+    color: whitesmoke;
+    background-color: darkorchid;
+    padding: 20px 17px;
+}
+.dropdown{
+    display: none;
+}
+.menu ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+.menu ul li:hover .dropdown ul{
+    display: block;
+    background-color: pink;
+}
+.menu ul li:hover .dropdown ul li a{
+    color: black;
+}
+.sub{
+    position: relative;
+}
+.sub_menu{
+    display: none;
+}
+.sub:hover .sub_menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.sub_menu ul li a{
+    color:tomato;
+}
+
+
+/*Navigation part css end*/
+
+/*Banner part css start*/
+.banner{
+    background: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ban_overlay{
+    height: 650px;
+}
+.ban_con{
+    color: darkgrey;
+    text-align: center;
+}
+
+.ban_con a{
+    display: inline-block;
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    margin-top: 44%;
+    line-height: 5px;
+    animation: bouncing 0.5s ease 0s infinite alternate both;
+}
+.ban_con a:hover{
+    background-color: rgb(255, 167, 167);
+}
+@keyframes bouncing{
+    0%{
+        top: 0;
+        box-shadow: 0 0 5px rgba(16, 216, 238, 0.837);
+    }
+    100%{
+        top: 50px;
+        box-shadow: 0 50px 50px rgba(235, 202, 202, 0.508);
+    }
+}
+/*Banner part css end*/
+
+/*About part css start*/
+.about_head h2{
+    text-align: center;
+    padding: 8px 0;
+    background-color: royalblue;
+    border-radius: 5px;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.about_img{
+    width: 47%;
+    float: left;
+    margin-right: 10px;
+}
+.about_img img{
+    width: 100%;
+}
+.about_con{
+    width: 50%;
+    float: left;
+    padding-top: 10px;
+}
+.about_con p{
+    line-height: 25px;
+    text-align: justify;
+    font-size: 20px;
+}
+.about_con p a{
+    color: whitesmoke;
+}
+.about_img2{
+    width: 47%;
+    float: right;
+    margin-top: 200px;
+}
+.about_img2 img{
+    width: 100%;
+}
+.about_con2{
+    width: 50%;
+    float: right;
+    margin-top: 150px;
+    margin-right: 15px;
+    padding-top: 10px;
+}
+.about_con2 p{
+    text-align: justify;
+    font-size: 20px;
+}
+.about_img3{
+    width: 45%;
+    float: left;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.about_img3 img{
+    width: 100%;
+}
+.about_con3{
+    width: 45%;
+    float: right;
+    margin-top: 150px;
+    margin-right: 55px;
+}
+.about_con3 p{
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+
+
+/*About part css end*/
+
+/*Gallery part css start*/
+.gly{
+    width: 32%;
+    float: left;
+}
+.gly img{
+    width: 100%;
+    border: 5px solid #000; 
+}
+.gly_middle{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.gly img:hover{
+    border: 5px solid rgba(51, 167, 86, 0.734);
+}
+
+
+.container2{
+    width: 1280px;
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container2 .box{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #ff0;
+    margin: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.container2 .box .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+.container2 .box .imgBox img{
+    max-width: 100%;
+    transition: transform 2s;
+}
+.container2 .box:hover .imgBox img{
+    transform: scale(1.2);
+}
+.container2 .box .details{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    transform:scaleY(0);
+    transition: transform .5s;
+}
+.container2 .box:hover .details {
+    transform:scaleY(1);
+}
+.container2 .box .details .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.container2 .box .details .content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+.container2 .box .details .content p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+.gly_he{
+    background-color: darkgray;
+    text-align: center;
+    font-size: 28px;
+    
+}
+
+/*Gallery part css end*/
+/* team part css start  */
+.con{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.img{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img img{
+    height: 400px;
+    width: 33%;
+    border: 2px solid burlywood;
+    border-radius: 50%;
+}
+.img_p{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.img_p a{
+    color: rgb(255, 0, 0);
+}
+.sec .s_img{
+    float: left;
+    margin-left: 100px;
+}
+.s_img{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.s_img img{
+    height: 300px;
+    width: 220px;
+    border: 2px solid burlywood;
+    border-radius: 50%;
+}
+/* team part css end  */
+/* event part css start  */
+.container6 h3{
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 50px;
+}
+.e_img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.e_img img{
+    width: 40%;
+    margin-left: 370px;
+}
+.e_con h5{
+    text-align: center;
+    color: yellow;
+}
+.e_con p{
+    font-size: 18px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.e_img2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.e_img2 img{
+    width: 40%;
+    margin-left: 370px;
+}
+.e_con2 h5{
+    text-align: center;
+    color: yellow;
+}
+.e_con2 p{
+    font-size: 18px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+ul,li{
+    list-style: none;
+}
+.icon{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.icon ul{
+    display: inline-flex;
+}
+.icon ul li {
+    margin-left: 50px;
+}
+.icon ul li a{
+    display: block;
+    color: rgb(58, 8, 8);
+    font-size: 30px;
+    text-decoration: none;
+}
+.icon ul li:hover:nth-child(1) a{
+    color:  rgb(0, 8, 238);
+}
+.icon ul li:hover:nth-child(2) a{
+    color: rgb(117, 190, 219);
+}
+.icon ul li:hover:nth-child(3) a{
+    color: red;
+}
+.icon ul li:hover:nth-child(4) a{
+    color: #00aeff;
+}
+.icon ul li:hover:nth-child(5) a{
+    color: slateblue;
+}
+.icon ul li:hover:nth-child(6) a{
+    color: chartreuse;
+}
+
+/* event part css end  */
+/* new part css start  */
+.n_con p{
+    font-size: 20px;
+    color: rgb(248, 2, 2);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.n_img img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* new part css end  */
+/* contact part css start  */
+.form_main{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(235, 211, 116) ;
+    border: 2px solid rgba(192, 233, 109, 0.74);
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .3s;
+}
+.form_main:hover{
+    box-shadow:  10px 10px 50px blue;
+    transition: all linear .3s;
+}
+.form_main form input{
+    height: 50px;
+    width: 250px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form_main form input:hover{
+    
+    transform: scaleY(1.5);
+}
+.form_main form input::placeholder{
+    color: rgb(44, 44, 40);
+}
+.form_main form label{
+    color: white;
+    font-size: 20px;
+}
+.form_main form label span{
+    color: red;
+}
+.form_main form button{
+    padding: 15px 30px;
+    margin-left: 70px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: salmon;
+    cursor: pointer;
+}
+
+
+
+
+
+/* contact part css end  */
+
+
+/*Footer part css start*/
+.f_h{
+    width: 100%;
+    height: 300px;
+    background-color: darkcyan;
+    display: inline-flex;
+}
+.company{
+    width: 30%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+.company h3{
+    font-size: 35px;
+    padding-top: 40px;
+    padding-bottom: 19px;
+}
+.company p{
+    font-size: 20px;
+    padding-left: 25%;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+.res{
+    width: 30%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+.res h3{
+    font-size: 35px;
+    padding-top: 40px;
+    padding-bottom: 19px;
+}
+.res p{
+    font-size: 20px;
+    padding-left: 23%;
+    text-align: justify;
+    color: rgb(252, 252, 252);
+}
+.sup{
+    width: 30%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+.sup h3{
+    font-size: 35px;
+    padding-top: 40px;
+    padding-bottom: 19px;
+}
+.sup p{
+    font-size: 20px;
+    padding-left: 27%;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+footer{
+    background-color: black;
+    color: cornsilk;
+    margin-top: 30px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Footer part css end*/
